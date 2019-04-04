@@ -29,3 +29,4 @@ Route::get('/producto', 'productoController@index');
 Route::resource('/register','RegisterController');
 Route::put('/users/{id}', 'UserController@update');
 Route::get('/users/{id}', 'UserController@show');
+Route::get('/producto/{id}', 'productoController@show');
