@@ -16,7 +16,7 @@ class Tarjeta extends Migration
         Schema::create('tarjeta', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('id_usuario');
-            $table->integer('numero');
+            $table->string('numero');
             $table->string('tipo');
             $table->string('banco');
             $table->integer('cvv');

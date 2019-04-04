@@ -4,11 +4,12 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Tarjeta;
 
 class tarjetaController extends Controller
 {
     
-    public function show(){
+    public function index(){
         return Tarjeta::all();
     }
     public function store(Request $request)
@@ -25,6 +26,10 @@ class tarjetaController extends Controller
         ]);
         $tarjeta->save();
         return Tarjeta::all();
+    }
+
+    public function show($id){
+        return Tarjeta::where('id_usuario',$id)->get();
     }
     public function destroy($id)
     {
