@@ -27,3 +27,4 @@ Route::get('/direccion', 'direccionController@show');
 Route::post('/newDireccion','direccionController@store');
 Route::get('/producto', 'productoController@index');
 Route::get('/producto/{id}', 'productoController@show');
+Route::post('/register','RegisterController@store');
