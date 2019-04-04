@@ -26,3 +26,4 @@ Route::post('/updateCarrito', 'carritoController@update');
 Route::post('/borrarCarro','carritoController@destroy');
 Route::get('/direccion', 'direccionController@show');
 Route::post('/newDireccion','direccionController@store');
+Route::get('/producto', 'productoController@index');
