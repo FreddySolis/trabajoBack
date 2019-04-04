@@ -38,8 +38,8 @@ class UserController extends Controller
     {
         $user = new User;
 
-        $user->name='Test';
-        $user->email='Test@gmail.com';
+        $user->name= $request->name;
+        $user->email=$request->email;
         $user->score='10';
         $user->email_verified_at=now();
         $user->remember_token=str_random(10);
