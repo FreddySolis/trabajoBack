@@ -33,14 +33,5 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
-    public function boot(){
-    $this->registerPolicies();
-
-    Passport::routes();
-
-    Passport::useTokenModel(Token::class);
-    Passport::useClientModel(Client::class);
-    Passport::useAuthCodeModel(AuthCode::class);
-    Passport::usePersonalAccessClientModel(PersonalAccessClient::class);
-}
+    
 }
