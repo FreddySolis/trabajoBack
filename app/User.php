@@ -6,6 +6,11 @@ use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Laravel\Passport\HasApiTokens;
+use App\Models\Passport\Client;
+use App\Models\Passport\Token;
+use App\Models\Passport\AuthCode;
+use App\Models\Passport\PersonalAccessClient;
+
 
 class User extends Authenticatable
 {
@@ -28,4 +33,14 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+    public function boot(){
+    $this->registerPolicies();
+
+    Passport::routes();
+
+    Passport::useTokenModel(Token::class);
+    Passport::useClientModel(Client::class);
+    Passport::useAuthCodeModel(AuthCode::class);
+    Passport::usePersonalAccessClientModel(PersonalAccessClient::class);
+}
 }
