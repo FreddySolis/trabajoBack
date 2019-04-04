@@ -26,12 +26,11 @@ Route::post('/borrarCarro','carritoController@destroy');
 Route::get('/direccion', 'direccionController@show');
 Route::post('/newDireccion','direccionController@store');
 Route::get('/producto', 'productoController@index');
-<<<<<<< HEAD
+
 Route::get('/producto/{id}', 'productoController@show');
 Route::post('/register','RegisterController@store');
-=======
-Route::resource('/register','RegisterController');
+
 Route::put('/users/{id}', 'UserController@update');
 Route::get('/users/{id}', 'UserController@show');
-Route::get('/producto/{id}', 'productoController@show');
->>>>>>> 9e69ad53553eb6503d4b174a1e26706df3bea16f
+
+
