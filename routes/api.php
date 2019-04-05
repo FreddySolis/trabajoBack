@@ -23,7 +23,7 @@ Route::get('/carrito', 'carritoController@index');
 Route::get('/carrito/{id}', 'carritoController@show');
 Route::post('/newCarrito','carritoController@store');
 Route::post('/updateCarrito', 'carritoController@update');
-Route::post('/borrarCarro','carritoController@destroy');
+Route::get('/borrarCarro/{id}','carritoController@destroy');
 Route::get('/direccion', 'direccionController@show');
 Route::post('/newDireccion','direccionController@store');
 Route::get('/producto', 'productoController@index');
