@@ -13,7 +13,7 @@ class Carrito extends Migration
      */
     public function up()
     {
-        Schema::create('carrito', function (Blueprint $table) {
+        Schema::create('carritos', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('id_producto');
             $table->integer('id_usuario');

@@ -35,7 +35,8 @@ class tarjetaController extends Controller
     {
         //
         $tarjeta = Tarjeta::find($id);
+        $a = $tarjeta->id_usuario;
         $tarjeta->delete();
-        return Tarjeta::all();
+        return Tarjeta::where('id_usuario',$a)->get();
     }
 }

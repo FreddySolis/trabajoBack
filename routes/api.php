@@ -18,8 +18,9 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::get('/userid/{email}','UserController@getId');
 Route::get('/tarjeta/{id}','tarjetaController@show');
 Route::post('/newTarjeta', 'tarjetaController@store');
-Route::get('/borrarTarjeta','tarjetaController@destroy');
-Route::get('/carrito', 'carritoController@show');
+Route::get('/borrarTarjeta/{id}','tarjetaController@destroy');
+Route::get('/carrito', 'carritoController@index');
+Route::get('/carrito/{id}', 'carritoController@show');
 Route::post('/newCarrito','carritoController@store');
 Route::post('/updateCarrito', 'carritoController@update');
 Route::post('/borrarCarro','carritoController@destroy');

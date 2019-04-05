@@ -20,7 +20,7 @@ class Tarjeta extends Migration
             $table->string('tipo');
             $table->string('banco');
             $table->integer('cvv');
-            $table->string('expiración');
+            $table->string('expiracion');
             $table->rememberToken();
             $table->timestamps();
         });
