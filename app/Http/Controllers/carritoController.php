@@ -31,7 +31,7 @@ class carritoController extends Controller
         //
         $carrito->fill([
             'id_producto' => $request->id_producto,
-            'total' => $request->precio,
+            'total' => $request->total,
             'id_usuario' => $request->id_usuario,
             'cantidad' => $request->cantidad,
         ]);
