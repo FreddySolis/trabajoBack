@@ -31,7 +31,7 @@ class carritoController extends Controller
         //
         $carrito->fill([
             'id_producto' => $request->id_producto,
-            'precio' => $request->precio,
+            'total' => $request->precio,
             'id_usuario' => $request->id_usuario,
             'cantidad' => $request->cantidad,
         ]);
@@ -41,7 +41,7 @@ class carritoController extends Controller
     public function destroy($id)
     {
         //
-        $carrito = carrito::find($id);
+        $carrito = carrito::where("id",$id)->first();
         $carrito->delete();
         return carrito::all();
     }
